@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="gb2312" ?><?xml-stylesheet type="text/xsl" href="D:\Program Files\National Instruments\TestStand 2014\Components\Models\TestStandModels\ATML\StyleSheets\tr5_horizontal.xsl"?>
+
+<trc:TestResultsCollection xmlns:trc="urn:IEEE-1636.1:2011:01:TestResultsCollection" xmlns:tr="urn:IEEE-1636.1:2011:01:TestResults" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/2.0">
+<trc:TestResults uuid="e65cdcba-565d-43e1-a5c7-3527074dbb6a" xmlns:trc="urn:IEEE-1636.1:2011:01:TestResultsCollection" xmlns:tr="urn:IEEE-1636.1:2011:01:TestResults" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/2.0">
+	<tr:Personnel>
+		<tr:SystemOperator ID = "administrator" name = "administrator"/>
+	</tr:Personnel>
+	<tr:ResultSet ID="3" name = "F:\Bluewave New Energy\SVN_Work\AutoTest_TestStand\trunk\AutoTest_TestStand\SEQ\BMU TEST1.seq#MainSequence" startDateTime = "2016-04-01T15:19:39.829" endDateTime = "2016-04-01T15:19:47.617">
+		<tr:Extension>
+			<ts:TSStepProperties>
+				<ts:StepType>SequenceCall</ts:StepType>
+				<ts:StepGroup>Main</ts:StepGroup>
+				<ts:BlockLevel value='0'/>
+				<ts:StepCausedSequenceFailure value='true'/>
+				<ts:Index value='7'/>
+				<ts:TotalTime value='7.78889'/>
+				<ts:ModuleTime value='7.78832'/>
+			</ts:TSStepProperties>
+		</tr:Extension>
+		<tr:Outcome value="Failed" />
+		<tr:SessionAction ID = "5" name = "L1_LoopTimes=0" startDateTime = "2016-04-01T15:19:39.930"  endDateTime = "2016-04-01T15:19:39.931"  testReferenceID="ID#:wLPKzhN6bkKUIpE+OWj/tB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Statement</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='0'/>
+					<ts:TotalTime value='0.0004759'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "7" name = "智嵌16/16_RelayBoard_Open" startDateTime = "2016-04-01T15:19:39.945"  endDateTime = "2016-04-01T15:19:39.990"  testReferenceID="ID#:QfBhmy1ecUmeCmtxkcLE3C">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='1'/>
+					<ts:TotalTime value='0.0451245'/>
+					<ts:ModuleTime value='0.0450741'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "8" name = "OI" startDateTime = "2016-04-01T15:19:39.991"  endDateTime = "2016-04-01T15:19:39.992"  testReferenceID="ID#:ba1RQeyM+k6rI3DTl0R4gA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='2'/>
+					<ts:TotalTime value='0.0009163'/>
+					<ts:ModuleTime value='0.0008743'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "9" name = "24V上电" startDateTime = "2016-04-01T15:19:39.994"  endDateTime = "2016-04-01T15:19:40.027"  testReferenceID="ID#:nAJtR6AG0Emf5LNJxNdxpA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='3'/>
+					<ts:TotalTime value='0.0327164'/>
+					<ts:ModuleTime value='0.0326795'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "10" name = "ON档上电" startDateTime = "2016-04-01T15:19:40.031"  endDateTime = "2016-04-01T15:19:40.032"  testReferenceID="ID#:pfcA4bpkEke+TwRgBorwiC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Setup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='4'/>
+					<ts:TotalTime value='0.0016016'/>
+					<ts:ModuleTime value='0.0015661'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "11" name = "BMU BurnBootImage" startDateTime = "2016-04-01T15:19:40.039"  endDateTime = "2016-04-01T15:19:40.039"  testReferenceID="ID#:QfqOaU/ghEm5zp4MYiW3jC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='1'/>
+					<ts:TotalTime value='1.45e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "12" name = "ZlgCan_Open_BUT" startDateTime = "2016-04-01T15:19:40.041"  endDateTime = "2016-04-01T15:19:40.041"  testReferenceID="ID#:hwt4caGF/0W2PU0fJ6CC4D">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='2'/>
+					<ts:TotalTime value='2.05e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "13" name = "ZlgCan_RecvData_BUT" startDateTime = "2016-04-01T15:19:40.042"  endDateTime = "2016-04-01T15:19:40.042"  testReferenceID="ID#:hk/MP+F5HkiierDRbcLKBC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='3'/>
+					<ts:TotalTime value='1.26e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "14" name = "ZlgCan_Close" startDateTime = "2016-04-01T15:19:40.044"  endDateTime = "2016-04-01T15:19:40.044"  testReferenceID="ID#:SdTXCZOV3020ZJUcCf3TWA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='4'/>
+					<ts:TotalTime value='1.4e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "15" name = "L1_LoopTimes++" startDateTime = "2016-04-01T15:19:40.045"  endDateTime = "2016-04-01T15:19:40.045"  testReferenceID="ID#:lf1ga1EnIkysW6ZgLqAOeD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Statement</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='5'/>
+					<ts:TotalTime value='1.35e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "16" name = "If" startDateTime = "2016-04-01T15:19:40.046"  endDateTime = "2016-04-01T15:19:40.046"  testReferenceID="ID#:VoO/W+atbU2LeixBhylYxB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_If</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='6'/>
+					<ts:TotalTime value='1.31e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "17" name = "If" startDateTime = "2016-04-01T15:19:40.048"  endDateTime = "2016-04-01T15:19:40.048"  testReferenceID="ID#:O4ya1bdvBU6Z2MZa90BE9D">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_If</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='7'/>
+					<ts:TotalTime value='0.0001031'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "18" name = "Goto" startDateTime = "2016-04-01T15:19:40.050"  endDateTime = "2016-04-01T15:19:40.050"  testReferenceID="ID#:Gr+fqRH3R0ecdPe0TsuEFD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Goto</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='2'/>
+					<ts:Index value='8'/>
+					<ts:TotalTime value='1.45e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "19" name = "End" startDateTime = "2016-04-01T15:19:40.051"  endDateTime = "2016-04-01T15:19:40.051"  testReferenceID="ID#:mw2U2/6MN0yzeI2/pHOlcA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_End</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='9'/>
+					<ts:TotalTime value='1.31e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "20" name = "Goto" startDateTime = "2016-04-01T15:19:40.053"  endDateTime = "2016-04-01T15:19:40.053"  testReferenceID="ID#:X+GGdYX3HEevyQa/vmCJsC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Goto</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='1'/>
+					<ts:Index value='10'/>
+					<ts:TotalTime value='1.31e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "21" name = "End" startDateTime = "2016-04-01T15:19:40.054"  endDateTime = "2016-04-01T15:19:40.054"  testReferenceID="ID#:ywOcSxXGMEW+aZRLeL5WYB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Flow_End</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='11'/>
+					<ts:TotalTime value='1.26e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "22" name = "Wait" startDateTime = "2016-04-01T15:19:40.055"  endDateTime = "2016-04-01T15:19:40.055"  testReferenceID="ID#:xasEeGtysUOtSjlOp0ux3C">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Wait</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='12'/>
+					<ts:TotalTime value='1.31e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "23" name = "BMU Update" startDateTime = "2016-04-01T15:19:40.057"  endDateTime = "2016-04-01T15:19:40.057"  testReferenceID="ID#:N5/1rhWeCEuoMQka71vG2D">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='13'/>
+					<ts:LoopingProperties>
+						<ts:NumLoops value='0' xsi:type='c:double'/>
+						<ts:NumPassed value='0' xsi:type='c:double'/>
+						<ts:NumFailed value='0' xsi:type='c:double'/>
+						<ts:EndingLoopIndex value='0' xsi:type='c:double'/>
+					</ts:LoopingProperties>
+					<ts:TotalTime value='1.35e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "24" name = "BMU Config New" startDateTime = "2016-04-01T15:19:40.058"  endDateTime = "2016-04-01T15:19:40.058"  testReferenceID="ID#:unvxVxmkVU+g2AHHxJD6jC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='14'/>
+					<ts:TotalTime value='1.21e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "25" name = "BMU Read Config" startDateTime = "2016-04-01T15:19:40.060"  endDateTime = "2016-04-01T15:19:40.060"  testReferenceID="ID#:5WgSDYje1kGQe/euH4i4eA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='15'/>
+					<ts:TotalTime value='1.4e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "26" name = "ZlgCan_Open_BUT" startDateTime = "2016-04-01T15:19:40.063"  endDateTime = "2016-04-01T15:19:40.063"  testReferenceID="ID#:0jtnWlR5Ckqjd729uywEwA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='16'/>
+					<ts:TotalTime value='2.75e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "27" name = "ZlgCan_GetBmuNo" startDateTime = "2016-04-01T15:19:40.066"  endDateTime = "2016-04-01T15:19:40.066"  testReferenceID="ID#:yuxhnXM6pUy2YdJeOOAkFB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='17'/>
+					<ts:TotalTime value='1.73e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "28" name = "BMU_GetVoltNumber" startDateTime = "2016-04-01T15:19:40.069"  endDateTime = "2016-04-01T15:19:40.069"  testReferenceID="ID#:Xv2eOxB/x0S9GwUCMId7EA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='18'/>
+					<ts:TotalTime value='2.05e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "29" name = "BMU_GetNTCNumber" startDateTime = "2016-04-01T15:19:40.071"  endDateTime = "2016-04-01T15:19:40.071"  testReferenceID="ID#:ZhXp6M6KakWpgiJY/ndf9C">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='19'/>
+					<ts:TotalTime value='1.4e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "30" name = "ReadOneBmuVolt_Show" startDateTime = "2016-04-01T15:19:40.075"  endDateTime = "2016-04-01T15:19:40.075"  testReferenceID="ID#:wC43DNLeukeRDJ4g1FUX/D">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_MultipleNumericLimitTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='20'/>
+					<ts:TotalTime value='1.54e-005'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:SessionAction ID = "31" name = "BMU 断开风机继电器" startDateTime = "2016-04-01T15:19:40.081"  endDateTime = "2016-04-01T15:19:40.082"  testReferenceID="ID#:V/DadYiNwUWsg7enMQ2TfC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='22'/>
+					<ts:TotalTime value='0.0009988'/>
+					<ts:ModuleTime value='0.0009694'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "32" name = "Wait" startDateTime = "2016-04-01T15:19:40.084"  endDateTime = "2016-04-01T15:19:41.091"  testReferenceID="ID#:ekxQD9ruN0KDl0qXoVRXlB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Wait</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='23'/>
+					<ts:TotalTime value='1.00711'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "33" name = "风机继电器断开检测" startDateTime = "2016-04-01T15:19:41.094"  endDateTime = "2016-04-01T15:19:41.403"  testReferenceID="ID#:AsJw0hH3VEi93PskA+anCD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:StepCausedSequenceFailure value='true'/>
+					<ts:Index value='24'/>
+					<ts:TotalTime value='0.308925'/>
+					<ts:ModuleTime value='0.308497'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Failed" />
+			<tr:TestResult ID = "tr-1d1a4275-f7da-11e5-b3bb-68f728e06079" name = "结果">
+				<tr:TestData>
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x2000"/>
+				</tr:TestData>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "34" name = "OI1" startDateTime = "2016-04-01T15:19:41.406"  endDateTime = "2016-04-01T15:19:41.408"  testReferenceID="ID#:zlRtpPt9UEO2l+Kn9EGtID">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='25'/>
+					<ts:TotalTime value='0.0016795'/>
+					<ts:ModuleTime value='0.0016473'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "35" name = "BMU闭合风机继电器" startDateTime = "2016-04-01T15:19:41.411"  endDateTime = "2016-04-01T15:19:41.441"  testReferenceID="ID#:tWk450ZDg0qjs1BjeHlepB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='26'/>
+					<ts:TotalTime value='0.0298715'/>
+					<ts:ModuleTime value='0.0298384'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "36" name = "Wait" startDateTime = "2016-04-01T15:19:41.444"  endDateTime = "2016-04-01T15:19:42.444"  testReferenceID="ID#:c0bZWqYfhUq6P7zqk2ecUA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Wait</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='27'/>
+					<ts:TotalTime value='1.00026'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "38" name = "风机继电器闭合检测" startDateTime = "2016-04-01T15:19:42.463"  endDateTime = "2016-04-01T15:19:42.771"  testReferenceID="ID#:aC0Syc6CMUS034awiNRGSD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='28'/>
+					<ts:TotalTime value='0.30764'/>
+					<ts:ModuleTime value='0.307586'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Failed" />
+			<tr:TestResult ID = "tr-1d1a4276-f7da-11e5-b3bb-68f728e06079" name = "结果">
+				<tr:TestData>
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x2000"/>
+				</tr:TestData>
+			</tr:TestResult>
+		</tr:Test>
+		<tr:SessionAction ID = "39" name = "OI2" startDateTime = "2016-04-01T15:19:42.774"  endDateTime = "2016-04-01T15:19:42.775"  testReferenceID="ID#:kIwPxx1LMk6zmb23J1zxzB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='29'/>
+					<ts:TotalTime value='0.0007814'/>
+					<ts:ModuleTime value='0.0007506'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "40" name = "BMU 断开加热继电器" startDateTime = "2016-04-01T15:19:42.778"  endDateTime = "2016-04-01T15:19:42.779"  testReferenceID="ID#:OtBz9h4MGUapjGLP2P033A">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='30'/>
+					<ts:TotalTime value='0.0007796'/>
+					<ts:ModuleTime value='0.0007516'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "41" name = "Wait" startDateTime = "2016-04-01T15:19:42.811"  endDateTime = "2016-04-01T15:19:43.811"  testReferenceID="ID#:4jSOrhJXcku/9LcLFEDZdA">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Wait</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='31'/>
+					<ts:TotalTime value='1.00023'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "42" name = "加热继电器断开检测" startDateTime = "2016-04-01T15:19:43.814"  endDateTime = "2016-04-01T15:19:44.123"  testReferenceID="ID#:mZf6e5yG4UO+lZKTVdDeFB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='32'/>
+					<ts:TotalTime value='0.308605'/>
+					<ts:ModuleTime value='0.308545'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Failed" />
+		</tr:Test>
+		<tr:SessionAction ID = "43" name = "OI3" startDateTime = "2016-04-01T15:19:44.126"  endDateTime = "2016-04-01T15:19:44.126"  testReferenceID="ID#:WkvnkQmRA0Kgbro0JChRhC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='33'/>
+					<ts:TotalTime value='0.0006923'/>
+					<ts:ModuleTime value='0.0006601'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "44" name = "BMU 闭合加热继电器" startDateTime = "2016-04-01T15:19:44.131"  endDateTime = "2016-04-01T15:19:44.161"  testReferenceID="ID#:t4lDjLDAkUyTqqCsB05+cB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='34'/>
+					<ts:TotalTime value='0.0301197'/>
+					<ts:ModuleTime value='0.030087'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "45" name = "Wait" startDateTime = "2016-04-01T15:19:44.163"  endDateTime = "2016-04-01T15:19:46.164"  testReferenceID="ID#:kYOAWhq1yky4TLnetyJFZC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Wait</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='35'/>
+					<ts:TotalTime value='2.00031'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "47" name = "加热继电器闭合检测" startDateTime = "2016-04-01T15:19:46.177"  endDateTime = "2016-04-01T15:19:46.484"  testReferenceID="ID#:SOH6KD20vkeiYYaMj6enzD">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='36'/>
+					<ts:TotalTime value='0.30717'/>
+					<ts:ModuleTime value='0.307114'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Failed" />
+		</tr:Test>
+		<tr:SessionAction ID = "48" name = "OI4" startDateTime = "2016-04-01T15:19:46.487"  endDateTime = "2016-04-01T15:19:46.488"  testReferenceID="ID#:NF0AVt3jr0aLBGLBRwLqKB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='37'/>
+					<ts:TotalTime value='0.0009914'/>
+					<ts:ModuleTime value='0.0009615'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "49" name = "Wait" startDateTime = "2016-04-01T15:19:46.491"  endDateTime = "2016-04-01T15:19:47.491"  testReferenceID="ID#:WU0yJBG/MUuCmjxYduq1VC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Wait</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='38'/>
+					<ts:TotalTime value='1.00022'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "50" name = "24V下电" startDateTime = "2016-04-01T15:19:47.501"  endDateTime = "2016-04-01T15:19:47.503"  testReferenceID="ID#:iW7rSenGckO0Ii9og/+u5B">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='0'/>
+					<ts:TotalTime value='0.0014201'/>
+					<ts:ModuleTime value='0.0013865'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "51" name = "ON档下电" startDateTime = "2016-04-01T15:19:47.505"  endDateTime = "2016-04-01T15:19:47.507"  testReferenceID="ID#:5+wiyuaEkEOWZTYAlVIKaC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='1'/>
+					<ts:TotalTime value='0.0013944'/>
+					<ts:ModuleTime value='0.0013641'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "52" name = "ZlgCan_Close" startDateTime = "2016-04-01T15:19:47.510"  endDateTime = "2016-04-01T15:19:47.611"  testReferenceID="ID#:aLd7yJmihUeyPA2jD+kgCB">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='2'/>
+					<ts:TotalTime value='0.10087'/>
+					<ts:ModuleTime value='0.100838'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "53" name = "智嵌16/16_RelayBoard_Close" startDateTime = "2016-04-01T15:19:47.614"  endDateTime = "2016-04-01T15:19:47.614"  testReferenceID="ID#:0aqkKnbo5UGlhpXo/pUcjC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='3'/>
+					<ts:TotalTime value='0.0004721'/>
+					<ts:ModuleTime value='0.0004283'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+	</tr:ResultSet>
+	<tr:TestProgram>
+		<c:SerialNumber>
+			T450-PC
+		</c:SerialNumber>
+		<tr:Configuration>
+			<c:Collection xsi:type="ts:TS_Collection" flags = "0x0000">
+				<c:Item name = "IncludeTSExtensionElements">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeAttributes">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeLimits">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeMeasurements">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeArrayMeasurement">
+					<c:Datum value = "2" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ArrayMeasurementFilter">
+					<c:Datum value = "3" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ArrayMeasurementMax">
+					<c:Datum value = "100" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeTimes">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "Format">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>xml</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "NumericFormat">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>%$.13g</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ResultFilterExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>True</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "GeneratePath">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "UseTemporaryFile">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "UseSequenceFileNameAsPrefix">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "AddTimeAndDateToFileName">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachUUT">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ForceFileNameToBeUnique">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "AppendToFileIfItExists">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "DirectoryType">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>SpecificDirectory</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "Directory">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>F:\Bluewave New Energy\SVN_Work\AutoTest_TestStand\trunk\AutoTest_TestStand\Report</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "BaseName">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "UseFormatForExtension">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "Extension">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFilePath">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "DisableReportGeneration">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeStepResults">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "BodyGenerator">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>DLL</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "Colors">
+					<c:Collection xsi:type="ts:TS_Collection" flags = "0x0000">
+						<c:Item name = "LabelBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFFFFF</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "ValueBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#32FFFF</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "UUTSeparator">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#0000E0</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "HeaderSeparator">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#8000CC</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "TableBorder">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#000000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "MainBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00C4C4</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "SetupBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF8000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "CleanupBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#ADD8E6</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "ReportTextBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF32CC</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Terminated">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#000080</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Failed">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Error">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Passed">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#008000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Skipped">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#B98028</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Done">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#008000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Running">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFCC33</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "TerminatedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#0000FF</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "FailedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "ErrorBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "PassedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00FF00</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "SkippedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFFF00</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "DoneBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00FFCC</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "RunningBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFCC33</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "FailureStackLabelBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF2020</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "FailureStackValueBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#D0D0D0</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "BatchHeadingBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00C4C4</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</c:Item>
+				<c:Item name = "DateAndTimeFormat">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>DateFirst</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachBatch">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "NewBatchFileNameForEachBatch">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachTestSocket">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "StoreUUTReportWithBatchReport">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "BatchBaseName">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>BatchReport</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "LabelSize">
+					<c:Datum value = "26" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "RelStylesheetPath">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>tr5_horizontal.xsl</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "StylesheetPath">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>D:\Program Files\National Instruments\TestStand 2014\Components\Models\TestStandModels\ATML\StyleSheets\tr5_horizontal.xsl</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "StylesheetMRU">
+					<c:IndexedArray dimensions="[5]" lowerBounds="[0]" upperBounds="[4]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>report.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value>expand.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[3]">
+							<c:Value></c:Value>
+						</ts:Element>
+						<ts:Element position ="[4]">
+							<c:Value></c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+				<c:Item name = "ATMLStylesheetMRU">
+					<c:IndexedArray dimensions="[3]" lowerBounds="[0]" upperBounds="[2]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>TR_horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>trml.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value></c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+				<c:Item name = "StoreStylesheetAbsolutePath">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ProcessOnTheFly">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "PurgeOnTheFlyResults">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeStepResultComments">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "UseLocalizedDecimalPoint">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ReportStyle">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>ATML5</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFileSequentialModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_Report[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFileParallelModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_Report[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFileBatchModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_BatchReport[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "BatchFileBatchModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_BatchReport[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachUUTStatus">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ReportPathMacroListString">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "BatchReportPathMacroListString">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "CheckIfMacroListIsUnchanged">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ATML5StylesheetMRU">
+					<c:IndexedArray dimensions="[3]" lowerBounds="[0]" upperBounds="[2]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>tr5_horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>tr5_report.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value>tr5_expand.xsl</c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+				<c:Item name = "Atml_Rpt_Options">
+					<c:Collection xsi:type="ts:TS_Collection" flags = "0x0000">
+						<c:Item name = "AddReportText">
+							<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+						</c:Item>
+						<c:Item name = "ExtensionDLLAbsolutePath">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value></c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "TestResultsSchemaPath">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value></c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</c:Item>
+				<c:Item name = "ATML6StylesheetMRU">
+					<c:IndexedArray dimensions="[5]" lowerBounds="[0]" upperBounds="[4]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>tr6_horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>tr6_report.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value>tr6_expand.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[3]">
+							<c:Value></c:Value>
+						</ts:Element>
+						<ts:Element position ="[4]">
+							<c:Value></c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+			</c:Collection>
+		</tr:Configuration>
+	</tr:TestProgram>
+	<tr:TestStation>
+		<c:SerialNumber>T450-PC</c:SerialNumber>
+	</tr:TestStation>
+	<tr:UUT>
+		<c:SerialNumber>NONE</c:SerialNumber>
+	</tr:UUT>
+	<tr:Extension>
+		<ts:TSResultSetProperties>
+			<ts:NumOfResults value = '46'/>
+			<ts:CriticalFailureStack>
+				<ts:CriticalFailureStackEntry resultID="33" stepName="风机继电器断开检测" sequenceName="MainSequence" sequenceFileName="BMU TEST1.seq"/>
+			</ts:CriticalFailureStack>
+		</ts:TSResultSetProperties>
+	</tr:Extension>
+</trc:TestResults>
+</trc:TestResultsCollection>

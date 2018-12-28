@@ -1,0 +1,71 @@
+// --------------------------------------------------
+// Properties for "MainSequence"
+// --------------------------------------------------
+START_MainSequence
+<Step Name>	Limits.High	Limits.Low
+
+<Locals>	Variable Value
+MSG	"hello"
+<FileGlobals>	Variable Value
+<StationGlobals>	Variable Value
+END_MainSequence
+
+// --------------------------------------------------
+// Properties for "SequenceFileLoad"
+// --------------------------------------------------
+
+START_SequenceFileLoad
+END_SequenceFileLoad
+
+// --------------------------------------------------
+// Properties for "Sequence1"
+// --------------------------------------------------
+START_Sequence1
+<Step Name>	Limits.High	Limits.Low
+Numeric Limit Test	20	15
+<Locals>	Variable Value
+ComparisonValue	17
+CANTYPE	21
+
+<FileGlobals>	Variable Value
+<StationGlobals>	Variable Value
+END_Sequence1
+
+// --------------------------------------------------
+// Properties for "Sequence2"
+// --------------------------------------------------
+START_Sequence2
+<Step Name>	Limits.High	Limits.Low
+Numeric Limit Test	30	25
+
+<Locals>	Variable Value
+ComparisonValue	26
+CANTYPE	22
+
+<FileGlobals>	Variable Value
+<StationGlobals>	Variable Value
+END_Sequence2
+
+// --------------------------------------------------
+// Properties for "Sequence3"
+// --------------------------------------------------
+START_Sequence3
+<Step Name>	Limits.High	Limits.Low
+Numeric Limit Test	40	35
+
+<Locals>	Variable Value
+ComparisonValue	36
+CANTYPE	23
+
+<FileGlobals>	Variable Value
+<StationGlobals>	Variable Value
+END_Sequence3
+
+// --------------------------------------------------
+// These sequences must be defined, but do not have 
+// any properties to load
+// --------------------------------------------------
+
+START_ModelPluginConfiguration
+END_ModelPluginConfiguration
+// --------------------------------------------------

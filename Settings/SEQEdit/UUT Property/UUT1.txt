@@ -1,0 +1,34 @@
+// --------------------------------------------------
+// Properties for "MainSequence"
+// --------------------------------------------------
+START_MainSequence
+<Step Name>	Limits.High	Limits.Low
+
+<Locals>	Variable Value
+MSG	"hello"
+Can.CanType	21
+Can.CanIndex	1
+Can.CanChannel	0
+Can.BaudRate	11
+
+//21:CANE_2U	2:CAN2A
+//9:250K    10:500K
+
+<FileGlobals>	Variable Value
+<StationGlobals>	Variable Value
+END_MainSequence
+
+
+START_PostBatch
+<Locals>	Variable Value
+//CanType	21
+PostMsg	"Hello"
+//<FileGlobals>	Variable Value
+//<StationGlobals>	Variable Value
+END_PostBatch
+
+// --------------------------------------------------
+// These sequences must be defined, but do not have 
+// any properties to load
+// --------------------------------------------------
+// --------------------------------------------------

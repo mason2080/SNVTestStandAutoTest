@@ -1,0 +1,96 @@
+[DEF, %OBJROOT]
+PersistedBreakpointArray = Objs
+PersistedWatchpointArray = Objs
+PersistedWatchpoint = Obj
+
+[DEF, PersistedBreakpointArray]
+%NAME = ""
+
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 17.0.0.184
+CompatibleProdVersion = 17.0.0.0
+Version = 894
+Type = "TEPersisted"
+Path = ""
+ProductVersionString = "2017 (17.0.0.184)"
+Description = ""
+CharEncoding = ""
+
+[PersistedWatchpointArray]
+%HI = [9]
+
+[DEF, PersistedWatchpointArray]
+%[0] = "TYPE, PersistedWatchpoint"
+%[1] = "TYPE, PersistedWatchpoint"
+%[2] = "TYPE, PersistedWatchpoint"
+%[3] = "TYPE, PersistedWatchpoint"
+%[4] = "TYPE, PersistedWatchpoint"
+%[5] = "TYPE, PersistedWatchpoint"
+%[6] = "TYPE, PersistedWatchpoint"
+%[7] = "TYPE, PersistedWatchpoint"
+%[8] = "TYPE, PersistedWatchpoint"
+%[9] = "TYPE, PersistedWatchpoint"
+%NAME = ""
+
+[PersistedWatchpointArray[0]]
+Expression = "StationGlobals.DI_Settings.DI_Status"
+ClientFilePath = "E:\\AutoTest1\\DI_Test.seq"
+
+[PersistedWatchpointArray[1]]
+Expression = "StationGlobals.Agilent34461A万用表_Settings.Volt"
+ClientFilePath = "E:\\AutoTest1\\34461A_Test.seq"
+
+[PersistedWatchpointArray[2]]
+Expression = "StationGlobals.JH60通道模拟电芯_Settings.ReadCurr"
+ClientFilePath = "E:\\AutoTest1\\JH60CH_Test.seq"
+
+[PersistedWatchpointArray[3]]
+Expression = "StationGlobals.JH60通道模拟电芯_Settings.ReadVolt"
+ClientFilePath = "E:\\AutoTest1\\JH60CH_Test.seq"
+
+[PersistedWatchpointArray[4]]
+Expression = "FileGlobals.CellVolt"
+ClientFilePath = "E:\\AutoTest1\\60CH基准点检.seq"
+
+[PersistedWatchpointArray[5]]
+Expression = "StationGlobals.Agilent34461A万用表_Settings.Volt"
+ClientFilePath = "E:\\AutoTest1\\60CH基准点检.seq"
+
+[PersistedWatchpointArray[6]]
+Expression = "FileGlobals.LoopVariable"
+ClientFilePath = "E:\\AutoTest1\\60CH基准点检.seq"
+
+[PersistedWatchpointArray[7]]
+Expression = "StationGlobals.Agilent34461A万用表_Settings.Return"
+ClientFilePath = "E:\\AutoTest1\\60CH基准点检.seq"
+
+[PersistedWatchpointArray[8]]
+Expression = "StationGlobals.JH60通道模拟电芯_Settings.ReadVolt"
+ClientFilePath = "E:\\AutoTest_TestStand\\JH60CH_Test.seq"
+
+[PersistedWatchpointArray[9]]
+Expression = "StationGlobals.JH60通道模拟电芯_Settings.ReadCurr"
+ClientFilePath = "E:\\AutoTest_TestStand\\JH60CH_Test.seq"
+
+[%TYPES]
+PersistedWatchpoint = "PersistedWatchpoint"
+
+[DEF, PersistedWatchpoint]
+%LOCATION = "StdTypes"
+Expression = Str
+BreakpointType = Num
+ClientFilePath = Str
+SequenceFilePath = Str
+SequenceName = Str
+NumericFormat = Str
+UseContextFromScope = Bool
+%ROOT_TYPE = True
+
+[PersistedWatchpoint]
+%TIMESTAMP = 1510734246
+%VERSION = "17.0.0.184"
+%TYPELASTMOD = "17.0.0.184"
+%MINPRODVER = "17.0.0.0"
+%TYPE_FLG = 33554436
+

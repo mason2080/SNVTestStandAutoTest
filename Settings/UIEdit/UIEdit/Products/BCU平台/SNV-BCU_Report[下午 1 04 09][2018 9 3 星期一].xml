@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="gb2312" ?><?xml-stylesheet type="text/xsl" href="D:\Program Files (x86)\National Instruments\TestStand 2017\Components\Models\TestStandModels\ATML\StyleSheets\tr5_horizontal.xsl"?>
+
+<trc:TestResultsCollection xmlns:trc="urn:IEEE-1636.1:2011:01:TestResultsCollection" xmlns:tr="urn:IEEE-1636.1:2011:01:TestResults" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/2.0">
+<trc:TestResults uuid="cf6fb720-af36-11e8-9a9f-c85b76dfe942" xmlns:trc="urn:IEEE-1636.1:2011:01:TestResultsCollection" xmlns:tr="urn:IEEE-1636.1:2011:01:TestResults" xmlns:c="urn:IEEE-1671:2010:Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="www.ni.com/TestStand/ATMLTestResults/2.0">
+	<tr:Personnel>
+		<tr:SystemOperator ID = "administrator" name = "administrator"/>
+	</tr:Personnel>
+	<tr:ResultSet ID="5" name = "D:\PCTools\2.source\SNV-AutoTestV1.0.0A\Settings\UIEdit\产品代号\BCU平台\SNV-BCU.seq#MainSequence" startDateTime = "2018-09-03T13:04:09.491" endDateTime = "2018-09-03T13:04:18.673">
+	<tr:Events>
+		<tr:Event ID = "Error Message" severity="4" source="Error.Msg">
+			<tr:Data name="Error Message" >
+				<c:Datum xsi:type="c:string" >
+					<c:Value>The following error occurred for parameter 'Return Value' with argument expression '' for call to member 'GetBMSInfo': The definition for the struct 'SNV01.SNV01Control+BMS_INFO' is different in the assembly than when you specified the module. You must update the module specification and data TestStand passes.</c:Value>
+				</c:Datum>
+			</tr:Data>
+		</tr:Event>
+		<tr:Event ID = "Error Code" severity="0" source="Error.Code">
+			<tr:Message>
+				Operation Failed.
+			</tr:Message>
+			<tr:Data name="Error Code" >
+				<c:Datum value = "-17500" xsi:type="c:double" />
+			</tr:Data>
+		</tr:Event>
+	</tr:Events>
+		<tr:Extension>
+			<ts:TSStepProperties>
+				<ts:StepType>SequenceCall</ts:StepType>
+				<ts:StepGroup>Main</ts:StepGroup>
+				<ts:BlockLevel value='1'/>
+				<ts:Index value='10'/>
+				<ts:TotalTime value='9.18282'/>
+				<ts:ModuleTime value='9.18241'/>
+			</ts:TSStepProperties>
+		</tr:Extension>
+		<tr:Outcome value="Aborted" qualifier="Error" />
+		<tr:Test ID = "6" name = "Action" startDateTime = "2018-09-03T13:04:09.603"  endDateTime = "2018-09-03T13:04:09.603"  testReferenceID="ID#:MBQCGF2q6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='2'/>
+					<ts:TotalTime value='1.54e-05'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:SessionAction ID = "7" name = "Wait" startDateTime = "2018-09-03T13:04:09.605"  endDateTime = "2018-09-03T13:04:10.606"  testReferenceID="ID#:UKZqhbSs6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Wait</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='3'/>
+					<ts:TotalTime value='1.00101'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "8" name = "连接CAN_WithFilter" startDateTime = "2018-09-03T13:04:10.607"  endDateTime = "2018-09-03T13:04:10.892"  testReferenceID="ID#:YP9UqG2q6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='4'/>
+					<ts:TotalTime value='0.284888'/>
+					<ts:ModuleTime value='0.284843'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:SessionAction ID = "9" name = "Wait" startDateTime = "2018-09-03T13:04:10.893"  endDateTime = "2018-09-03T13:04:11.893"  testReferenceID="ID#:IGc7GHKq6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>NI_Wait</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='5'/>
+					<ts:TotalTime value='1.00022'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+		<tr:Test ID = "10" name = "BCU_RatedRealAh设置" startDateTime = "2018-09-03T13:04:11.896"  endDateTime = "2018-09-03T13:04:11.959"  testReferenceID="ID#:JDnd9gSs6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='7'/>
+					<ts:TotalTime value='0.0629936'/>
+					<ts:ModuleTime value='0.0627083'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "11" name = "BCU_SOC设置" startDateTime = "2018-09-03T13:04:11.961"  endDateTime = "2018-09-03T13:04:12.013"  testReferenceID="ID#:gE3x0Uer6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='8'/>
+					<ts:TotalTime value='0.0523814'/>
+					<ts:ModuleTime value='0.0523149'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "12" name = "BCU_SOH设置" startDateTime = "2018-09-03T13:04:12.014"  endDateTime = "2018-09-03T13:04:12.066"  testReferenceID="ID#:IKathHur6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='9'/>
+					<ts:TotalTime value='0.0517898'/>
+					<ts:ModuleTime value='0.051733'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "13" name = "BCU_Clock设置" startDateTime = "2018-09-03T13:04:12.067"  endDateTime = "2018-09-03T13:04:12.119"  testReferenceID="ID#:IaathHur6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='10'/>
+					<ts:TotalTime value='0.0517305'/>
+					<ts:ModuleTime value='0.0516648'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "14" name = "BCU_PackNo设置" startDateTime = "2018-09-03T13:04:12.120"  endDateTime = "2018-09-03T13:04:12.172"  testReferenceID="ID#:IqathHur6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='11'/>
+					<ts:TotalTime value='0.0515995'/>
+					<ts:ModuleTime value='0.0515398'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "15" name = "BCU_ChargeTimes设置" startDateTime = "2018-09-03T13:04:12.173"  endDateTime = "2018-09-03T13:04:12.226"  testReferenceID="ID#:4E+snnur6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='12'/>
+					<ts:TotalTime value='0.0526451'/>
+					<ts:ModuleTime value='0.0525777'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "16" name = "BCU_barCode设置(BMS异常)" startDateTime = "2018-09-03T13:04:12.227"  endDateTime = "2018-09-03T13:04:12.227"  testReferenceID="ID#:KtBTv+2r6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='13'/>
+					<ts:TotalTime value='2.86e-05'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "17" name = "BCU_ProductNo设置" startDateTime = "2018-09-03T13:04:12.230"  endDateTime = "2018-09-03T13:04:12.284"  testReferenceID="ID#:8NgiEe+r6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='14'/>
+					<ts:TotalTime value='0.0541774'/>
+					<ts:ModuleTime value='0.0541206'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "18" name = "BCU_Version设置" startDateTime = "2018-09-03T13:04:12.285"  endDateTime = "2018-09-03T13:04:12.318"  testReferenceID="ID#:IDnd9gSs6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='15'/>
+					<ts:TotalTime value='0.0326629'/>
+					<ts:ModuleTime value='0.0326057'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "19" name = "BCU_CarNo设置" startDateTime = "2018-09-03T13:04:12.319"  endDateTime = "2018-09-03T13:04:12.352"  testReferenceID="ID#:ITnd9gSs6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='16'/>
+					<ts:TotalTime value='0.0327397'/>
+					<ts:ModuleTime value='0.0326672'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "20" name = "BCU_HeatControl设置" startDateTime = "2018-09-03T13:04:12.353"  endDateTime = "2018-09-03T13:04:12.388"  testReferenceID="ID#:Ijnd9gSs6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='17'/>
+					<ts:TotalTime value='0.0346563'/>
+					<ts:ModuleTime value='0.0345953'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "21" name = "BCU_ChargeControl设置" startDateTime = "2018-09-03T13:04:12.390"  endDateTime = "2018-09-03T13:04:12.444"  testReferenceID="ID#:Iznd9gSs6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='18'/>
+					<ts:TotalTime value='0.0543937'/>
+					<ts:ModuleTime value='0.0543373'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "22" name = "BCU_CellNum设置" startDateTime = "2018-09-03T13:04:12.445"  endDateTime = "2018-09-03T13:04:12.665"  testReferenceID="ID#:0MXXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='19'/>
+					<ts:TotalTime value='0.219592'/>
+					<ts:ModuleTime value='0.219532'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "23" name = "BCU_TempNum设置" startDateTime = "2018-09-03T13:04:12.666"  endDateTime = "2018-09-03T13:04:12.879"  testReferenceID="ID#:0cXXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='20'/>
+					<ts:TotalTime value='0.213253'/>
+					<ts:ModuleTime value='0.213106'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "24" name = "BCU_Level1设置" startDateTime = "2018-09-03T13:04:12.880"  endDateTime = "2018-09-03T13:04:12.978"  testReferenceID="ID#:0sXXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='21'/>
+					<ts:TotalTime value='0.0974401'/>
+					<ts:ModuleTime value='0.097359'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "25" name = "BCU_Level2设置" startDateTime = "2018-09-03T13:04:12.979"  endDateTime = "2018-09-03T13:04:13.087"  testReferenceID="ID#:08XXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='22'/>
+					<ts:TotalTime value='0.107784'/>
+					<ts:ModuleTime value='0.107711'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "26" name = "BCU_Level3设置" startDateTime = "2018-09-03T13:04:13.088"  endDateTime = "2018-09-03T13:04:13.186"  testReferenceID="ID#:1MXXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='23'/>
+					<ts:TotalTime value='0.0977669'/>
+					<ts:ModuleTime value='0.0977076'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "27" name = "BCU_BatInfo设置" startDateTime = "2018-09-03T13:04:13.187"  endDateTime = "2018-09-03T13:04:13.285"  testReferenceID="ID#:1cXXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='24'/>
+					<ts:TotalTime value='0.0975647'/>
+					<ts:ModuleTime value='0.0975054'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "28" name = "BCU_ChargeAh设置" startDateTime = "2018-09-03T13:04:13.286"  endDateTime = "2018-09-03T13:04:13.320"  testReferenceID="ID#:1sXXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='25'/>
+					<ts:TotalTime value='0.0335519'/>
+					<ts:ModuleTime value='0.033438'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "29" name = "BCU_StartCellNo设置" startDateTime = "2018-09-03T13:04:13.321"  endDateTime = "2018-09-03T13:04:13.546"  testReferenceID="ID#:18XXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='26'/>
+					<ts:TotalTime value='0.224588'/>
+					<ts:ModuleTime value='0.224517'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "30" name = "BCU_StartTempNo设置" startDateTime = "2018-09-03T13:04:13.547"  endDateTime = "2018-09-03T13:04:13.772"  testReferenceID="ID#:2MXXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='27'/>
+					<ts:TotalTime value='0.224824'/>
+					<ts:ModuleTime value='0.224375'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "31" name = "BCU_BmuFusePos设置" startDateTime = "2018-09-03T13:04:13.773"  endDateTime = "2018-09-03T13:04:13.806"  testReferenceID="ID#:2cXXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='28'/>
+					<ts:TotalTime value='0.0326168'/>
+					<ts:ModuleTime value='0.0325592'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "32" name = "BCU_VoltChanNum设置" startDateTime = "2018-09-03T13:04:13.807"  endDateTime = "2018-09-03T13:04:13.884"  testReferenceID="ID#:2sXXzxes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='29'/>
+					<ts:TotalTime value='0.0766918'/>
+					<ts:ModuleTime value='0.0766329'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "33" name = "BCU_User设置" startDateTime = "2018-09-03T13:04:13.885"  endDateTime = "2018-09-03T13:04:13.918"  testReferenceID="ID#:0P5IQxis6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='30'/>
+					<ts:TotalTime value='0.0326974'/>
+					<ts:ModuleTime value='0.032639'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "34" name = "ClearBmsInfo" startDateTime = "2018-09-03T13:04:13.922"  endDateTime = "2018-09-03T13:04:13.923"  testReferenceID="ID#:cLbkISOs6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='32'/>
+					<ts:TotalTime value='0.0002359'/>
+					<ts:ModuleTime value='0.0001894'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "35" name = "BCU_SOC读取" startDateTime = "2018-09-03T13:04:13.934"  endDateTime = "2018-09-03T13:04:13.947"  testReferenceID="ID#:cbiQsSGs6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='33'/>
+					<ts:TotalTime value='0.0127473'/>
+					<ts:ModuleTime value='0.0126824'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "36" name = "BCU_SOH读取" startDateTime = "2018-09-03T13:04:13.950"  endDateTime = "2018-09-03T13:04:13.962"  testReferenceID="ID#:AD4A6yGs6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='34'/>
+					<ts:TotalTime value='0.0121398'/>
+					<ts:ModuleTime value='0.0120754'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "37" name = "BCU_PackNo读取" startDateTime = "2018-09-03T13:04:13.965"  endDateTime = "2018-09-03T13:04:13.976"  testReferenceID="ID#:AT4A6yGs6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='35'/>
+					<ts:TotalTime value='0.0117734'/>
+					<ts:ModuleTime value='0.0117128'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "38" name = "BCU_RatedRealAh读取" startDateTime = "2018-09-03T13:04:13.979"  endDateTime = "2018-09-03T13:04:14.014"  testReferenceID="ID#:0P044Cys6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='36'/>
+					<ts:TotalTime value='0.0345962'/>
+					<ts:ModuleTime value='0.0345382'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "39" name = "BCU_CarNumber读取" startDateTime = "2018-09-03T13:04:14.016"  endDateTime = "2018-09-03T13:04:14.050"  testReferenceID="ID#:YAWsyzas6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='37'/>
+					<ts:TotalTime value='0.0333467'/>
+					<ts:ModuleTime value='0.0332891'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "40" name = "BCU_ConfigVersion读取" startDateTime = "2018-09-03T13:04:14.053"  endDateTime = "2018-09-03T13:04:14.083"  testReferenceID="ID#:UMhYETes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='38'/>
+					<ts:TotalTime value='0.0306929'/>
+					<ts:ModuleTime value='0.0305684'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "41" name = "BCU_ProductNo读取" startDateTime = "2018-09-03T13:04:14.086"  endDateTime = "2018-09-03T13:04:14.140"  testReferenceID="ID#:UchYETes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='39'/>
+					<ts:TotalTime value='0.0543036'/>
+					<ts:ModuleTime value='0.0542311'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "42" name = "BCU_Clock读取" startDateTime = "2018-09-03T13:04:14.143"  endDateTime = "2018-09-03T13:04:14.174"  testReferenceID="ID#:UshYETes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='40'/>
+					<ts:TotalTime value='0.0304267'/>
+					<ts:ModuleTime value='0.0303525'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "43" name = "BCU_barCode读取" startDateTime = "2018-09-03T13:04:14.177"  endDateTime = "2018-09-03T13:04:14.177"  testReferenceID="ID#:U8hYETes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='41'/>
+					<ts:TotalTime value='1.66e-05'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "UserDefined" qualifier= "Skipped" />
+		</tr:Test>
+		<tr:Test ID = "44" name = "BCU_TempControl读取" startDateTime = "2018-09-03T13:04:14.180"  endDateTime = "2018-09-03T13:04:14.224"  testReferenceID="ID#:VMhYETes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='42'/>
+					<ts:TotalTime value='0.0441705'/>
+					<ts:ModuleTime value='0.0440677'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "45" name = "BCU_ChargeControl读取" startDateTime = "2018-09-03T13:04:14.227"  endDateTime = "2018-09-03T13:04:14.279"  testReferenceID="ID#:ULxaNEas6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='43'/>
+					<ts:TotalTime value='0.0514626'/>
+					<ts:ModuleTime value='0.051393'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "46" name = "BCU_VoltNumber读取" startDateTime = "2018-09-03T13:04:14.281"  endDateTime = "2018-09-03T13:04:14.483"  testReferenceID="ID#:VchYETes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='44'/>
+					<ts:TotalTime value='0.201609'/>
+					<ts:ModuleTime value='0.201547'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "47" name = "BCU_TempNumber读取" startDateTime = "2018-09-03T13:04:14.486"  endDateTime = "2018-09-03T13:04:14.689"  testReferenceID="ID#:VshYETes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='45'/>
+					<ts:TotalTime value='0.202961'/>
+					<ts:ModuleTime value='0.198082'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "48" name = "BCU_Level1读取" startDateTime = "2018-09-03T13:04:14.692"  endDateTime = "2018-09-03T13:04:14.784"  testReferenceID="ID#:4CdzdTes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='46'/>
+					<ts:TotalTime value='0.0915374'/>
+					<ts:ModuleTime value='0.0914764'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "49" name = "BCU_Level2读取" startDateTime = "2018-09-03T13:04:14.787"  endDateTime = "2018-09-03T13:04:14.890"  testReferenceID="ID#:4SdzdTes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='47'/>
+					<ts:TotalTime value='0.10294'/>
+					<ts:ModuleTime value='0.102868'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "50" name = "BCU_Level3读取" startDateTime = "2018-09-03T13:04:14.893"  endDateTime = "2018-09-03T13:04:14.983"  testReferenceID="ID#:4idzdTes6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='48'/>
+					<ts:TotalTime value='0.0906326'/>
+					<ts:ModuleTime value='0.0905494'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "51" name = "BCU_BatInfo读取" startDateTime = "2018-09-03T13:04:14.986"  endDateTime = "2018-09-03T13:04:15.073"  testReferenceID="ID#:0KVNPEas6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='49'/>
+					<ts:TotalTime value='0.0873936'/>
+					<ts:ModuleTime value='0.0872976'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "52" name = "BCU_ChargeDischargeAh读取" startDateTime = "2018-09-03T13:04:15.076"  endDateTime = "2018-09-03T13:04:15.124"  testReferenceID="ID#:0aVNPEas6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='50'/>
+					<ts:TotalTime value='0.0474676'/>
+					<ts:ModuleTime value='0.047404'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "53" name = "BCU_ChargeTimes读取" startDateTime = "2018-09-03T13:04:15.126"  endDateTime = "2018-09-03T13:04:15.158"  testReferenceID="ID#:0qVNPEas6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>PassFailTest</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='51'/>
+					<ts:TotalTime value='0.0319953'/>
+					<ts:ModuleTime value='0.0319326'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Passed" />
+		</tr:Test>
+		<tr:Test ID = "54" name = "GetBmsInfo" startDateTime = "2018-09-03T13:04:15.162"  endDateTime = "2018-09-03T13:04:17.627"  testReferenceID="ID#:gCK+MCOs6BGoechbdt/pQC">
+			<tr:Events>
+					<tr:Event ID = "Error Message" severity="4" source="Error.Msg">
+						<tr:Data name="Error Message" >
+							<c:Datum xsi:type="c:string" >
+								<c:Value>The following error occurred for parameter 'Return Value' with argument expression '' for call to member 'GetBMSInfo': The definition for the struct 'SNV01.SNV01Control+BMS_INFO' is different in the assembly than when you specified the module. You must update the module specification and data TestStand passes.</c:Value>
+							</c:Datum>
+						</tr:Data>
+					</tr:Event>
+					<tr:Event ID = "Error Code" severity="0" source="Error.Code">
+						<tr:Data name="Error Code" >
+							<c:Datum value = "-17500" xsi:type="c:double" />
+						</tr:Data>
+					</tr:Event>
+			</tr:Events>
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Main</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='52'/>
+					<ts:TotalTime value='2.46591'/>
+					<ts:ModuleTime value='0.028191'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:Outcome value = "Aborted" qualifier= "Error" />
+		</tr:Test>
+		<tr:SessionAction ID = "55" name = "断开CAN" startDateTime = "2018-09-03T13:04:17.655"  endDateTime = "2018-09-03T13:04:18.670"  testReferenceID="ID#:UAj0BnKq6BGoechbdt/pQC">
+			<tr:Extension>
+				<ts:TSStepProperties>
+					<ts:StepType>Action</ts:StepType>
+					<ts:StepGroup>Cleanup</ts:StepGroup>
+					<ts:BlockLevel value='0'/>
+					<ts:Index value='0'/>
+					<ts:TotalTime value='1.0157'/>
+					<ts:ModuleTime value='1.01562'/>
+				</ts:TSStepProperties>
+			</tr:Extension>
+			<tr:ActionOutcome value = "Done" />
+		</tr:SessionAction>
+	</tr:ResultSet>
+	<tr:TestProgram>
+		<c:SerialNumber>
+			MS-20180611GVXI
+		</c:SerialNumber>
+		<tr:Configuration>
+			<c:Collection xsi:type="ts:TS_Collection" flags = "0x0000">
+				<c:Item name = "IncludeTSExtensionElements">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeAttributes">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeLimits">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeMeasurements">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeArrayMeasurement">
+					<c:Datum value = "0" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ArrayMeasurementFilter">
+					<c:Datum value = "3" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ArrayMeasurementMax">
+					<c:Datum value = "100" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeTimes">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "Format">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>xml</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "NumericFormat">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>%$.13g</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ResultFilterExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>True</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "GeneratePath">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "UseTemporaryFile">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "UseSequenceFileNameAsPrefix">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "AddTimeAndDateToFileName">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachUUT">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ForceFileNameToBeUnique">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "AppendToFileIfItExists">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "DirectoryType">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>SequenceFileDirectory</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "Directory">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "BaseName">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>Report</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "UseFormatForExtension">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "Extension">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFilePath">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "DisableReportGeneration">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeStepResults">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "BodyGenerator">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>DLL</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "Colors">
+					<c:Collection xsi:type="ts:TS_Collection" flags = "0x0000">
+						<c:Item name = "LabelBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFFFFF</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "ValueBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#32FFFF</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "UUTSeparator">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#0000E0</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "HeaderSeparator">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#8000CC</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "TableBorder">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#000000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "MainBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00C4C4</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "SetupBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF8000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "CleanupBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#ADD8E6</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "ReportTextBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF32CC</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Terminated">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#000080</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Failed">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Error">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Passed">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#008000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Skipped">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#B98028</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Done">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#008000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "Running">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFCC33</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "TerminatedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#0000FF</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "FailedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "ErrorBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF0000</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "PassedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00FF00</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "SkippedBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFFF00</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "DoneBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00FFCC</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "RunningBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FFCC33</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "FailureStackLabelBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#FF2020</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "FailureStackValueBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#D0D0D0</c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "BatchHeadingBg">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value>#00C4C4</c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</c:Item>
+				<c:Item name = "DateAndTimeFormat">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>TimeFirst</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachBatch">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "NewBatchFileNameForEachBatch">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachTestSocket">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "StoreUUTReportWithBatchReport">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "BatchBaseName">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>BatchReport</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "LabelSize">
+					<c:Datum value = "26" xsi:type="ts:TS_double" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "RelStylesheetPath">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>tr5_horizontal.xsl</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "StylesheetPath">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>D:\Program Files (x86)\National Instruments\TestStand 2017\Components\Models\TestStandModels\ATML\StyleSheets\tr5_horizontal.xsl</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "StylesheetMRU">
+					<c:IndexedArray dimensions="[5]" lowerBounds="[0]" upperBounds="[4]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>report.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value>expand.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[3]">
+							<c:Value></c:Value>
+						</ts:Element>
+						<ts:Element position ="[4]">
+							<c:Value></c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+				<c:Item name = "ATMLStylesheetMRU">
+					<c:IndexedArray dimensions="[3]" lowerBounds="[0]" upperBounds="[2]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>TR_horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>trml.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value></c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+				<c:Item name = "StoreStylesheetAbsolutePath">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ProcessOnTheFly">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "PurgeOnTheFlyResults">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "IncludeStepResultComments">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "UseLocalizedDecimalPoint">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ReportStyle">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>ATML5</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFileSequentialModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_Report[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFileParallelModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_Report[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "ReportFileBatchModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_BatchReport[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "BatchFileBatchModelExpression">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value>"$(ClientFileDir)\\$(ClientFileName)_BatchReport[$(FileTime)][$(FileDate)]$(Unique).$(FileExtension)"</c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "NewFileNameForEachUUTStatus">
+					<c:Datum value = "false" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ReportPathMacroListString">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "BatchReportPathMacroListString">
+					<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+						<c:Value></c:Value>
+					</c:Datum>
+				</c:Item>
+				<c:Item name = "CheckIfMacroListIsUnchanged">
+					<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+				</c:Item>
+				<c:Item name = "ATML5StylesheetMRU">
+					<c:IndexedArray dimensions="[3]" lowerBounds="[0]" upperBounds="[2]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>tr5_horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>tr5_report.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value>tr5_expand.xsl</c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+				<c:Item name = "Atml_Rpt_Options">
+					<c:Collection xsi:type="ts:TS_Collection" flags = "0x0000">
+						<c:Item name = "AddReportText">
+							<c:Datum value = "true" xsi:type="ts:TS_boolean" flags = "0x0000"/>
+						</c:Item>
+						<c:Item name = "ExtensionDLLAbsolutePath">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value></c:Value>
+							</c:Datum>
+						</c:Item>
+						<c:Item name = "TestResultsSchemaPath">
+							<c:Datum xsi:type="ts:TS_string" flags = "0x0000">
+								<c:Value></c:Value>
+							</c:Datum>
+						</c:Item>
+					</c:Collection>
+				</c:Item>
+				<c:Item name = "ATML6StylesheetMRU">
+					<c:IndexedArray dimensions="[5]" lowerBounds="[0]" upperBounds="[4]" xsi:type="ts:TS_stringArray" flags = "0x0000">
+						<ts:Element position ="[0]">
+							<c:Value>tr6_horizontal.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[1]">
+							<c:Value>tr6_report.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[2]">
+							<c:Value>tr6_expand.xsl</c:Value>
+						</ts:Element>
+						<ts:Element position ="[3]">
+							<c:Value></c:Value>
+						</ts:Element>
+						<ts:Element position ="[4]">
+							<c:Value></c:Value>
+						</ts:Element>
+					</c:IndexedArray>
+				</c:Item>
+			</c:Collection>
+		</tr:Configuration>
+	</tr:TestProgram>
+	<tr:TestStation>
+		<c:SerialNumber>MS-20180611GVXI</c:SerialNumber>
+	</tr:TestStation>
+	<tr:UUT>
+		<c:SerialNumber>00</c:SerialNumber>
+	</tr:UUT>
+	<tr:Extension>
+		<ts:TSResultSetProperties>
+			<ts:NumOfResults value = '50'/>
+		</ts:TSResultSetProperties>
+	</tr:Extension>
+</trc:TestResults>
+</trc:TestResultsCollection>

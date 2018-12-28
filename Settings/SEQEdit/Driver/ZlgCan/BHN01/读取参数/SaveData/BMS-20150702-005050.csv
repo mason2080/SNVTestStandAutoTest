@@ -1,0 +1,2 @@
+No.,BMStime,Life,SumV,SumVOut,Curr,SOC,SOH,MaxV,MaxVNo,MinV,MaxVNo,DiffV,MaxT,MaxTNo,MinT,MinTNo,DiffT,AvgCurr,ISO,POSRLYState,NEGRLYState,PRERLYState,CHGRLYState,FanRLYState,HeatRLYState,FanState,HeatState,MaxChgCurr,MaxDchCurr,ActCap,TotalInAh,TotalOutAh,ISORp,ISORN,HdErrcode,BatErrcode,BatsysErrcode,OtherErrcode,SlaveNum
+1,2015-07-02 00:49:35,66,0,0.5,2.8,1.5,100,0,0,0,0,0,-40,0,-40,0,0,-1.8,Normal,Off,Off,Off,On,Off,Off,Close,Close,0,0,90,0.007,0,0,0,0082020300000000,CC000C0000000000,0000300000000000,000000000000000,4

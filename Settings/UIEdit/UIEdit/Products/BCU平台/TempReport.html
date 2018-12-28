@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title> Report</title><script type="text/javascript">
+					//		
+					var gStylesheetpath = "";	
+					/** A function to initialize the global variable with the stylesheet path**/	
+					setStylesheetPath = function(path)
+					{
+						gStylesheetpath = path;
+					}	
+					/** A function to return the image path depending on whether the file was packed using the XMLPack utility.
+					**/	
+					getImageAbsolutePath = function(imageFileName)
+					{
+						var path ="";	
+						path = gStylesheetpath +  imageFileName;
+						return path;	
+					}
+
+					var gExpandCollapseState = "collapsed";
+
+					/** An array cache of all divs in HTML body, this will calculate all expand collapse divs once and 
+					 store in this global array so that performance is improved for expand/collapse actions from second time**/
+					var gExpandCollapseImagesArray; 
+
+
+					/**Apply Expand/Collapse functionality for image element, this will be called by onClick event of img element
+					**/
+					expandCollapse = function(event)
+					{
+						var imgElem = event.target || event.srcElement;			
+						expandCollapseImageDiv(imgElem);
+					}
+
+					/**Apply Expand/Collapse functionality for div element which contains imgElem
+						imgElem - DOM object of img element
+					**/
+					expandCollapseImageDiv = function(imgElem)
+					{
+						var id = imgElem.className;
+						var expCollDiv = document.getElementById(id);
+						if(expCollDiv)
+						{
+							var imgSrc = imgElem.src;
+							var indexOfLastSlash  = imgSrc.lastIndexOf('/') + 1;
+							var imgPath = imgSrc.slice(0,indexOfLastSlash);
+							var imgName = imgSrc.slice(indexOfLastSlash);
+							if(expCollDiv.className == "expanded")
+							{
+								expCollDiv.className="collapsed";
+								expCollDiv.style.display="none";
+								imgName = imgName.replace("minus","plus");
+							}	
+							else
+							{
+								expCollDiv.className="expanded";
+								expCollDiv.style.display="block";
+								imgName = imgName.replace("plus","minus");
+							}	
+							imgElem.src=imgPath+imgName;
+						}
+					}
+
+					/**Change classname for DIV element, so that it is visible and expanded
+						imgElem - DOM object of img element
+					**/
+					expandImageDiv = function(imgElem)
+					{
+						var id = imgElem.className;
+						var expCollDiv = document.getElementById(id);
+						if(expCollDiv)
+						{
+							var imgSrc = imgElem.src;
+							var indexOfLastSlash  = imgSrc.lastIndexOf('/') + 1;
+							var imgPath = imgSrc.slice(0,indexOfLastSlash);
+							var imgName = imgSrc.slice(indexOfLastSlash);
+							expCollDiv.className="expanded";
+							expCollDiv.style.display="block";
+							imgName = imgName.replace("plus","minus");					
+							imgElem.src=imgPath+imgName;
+						}
+					}
+					/**Change classname for DIV element, so that it is hidden and collapsed
+						imgElem - DOM object of img element
+					**/
+					collapseImageDiv = function(imgElem)
+					{
+						var id = imgElem.className;
+						var expCollDiv = document.getElementById(id);
+						if(expCollDiv)
+						{
+							var imgSrc = imgElem.src;
+							var indexOfLastSlash  = imgSrc.lastIndexOf('/') + 1;
+							var imgPath = imgSrc.slice(0,indexOfLastSlash);
+							var imgName = imgSrc.slice(indexOfLastSlash);
+							expCollDiv.className="collapsed";
+							expCollDiv.style.display="none";
+							imgName = imgName.replace("minus","plus");	
+							imgElem.src=imgPath+imgName;
+						}
+					}
+					/**
+					* @constructor
+					*/
+					ImgCollection = function(imgArray) { this.imgArray= imgArray; 	this.state = "expanded"; };
+					
+					/** A High level expand/collapse function which will expand or collapse all the DIVs in HTML body 
+					**/
+					expandCollapseAll = function(event)
+					{
+						var rootImgElem = event.target || event.srcElement;		
+						var uniqueDivId = 	rootImgElem.className;
+						if(!gExpandCollapseImagesArray)
+						{
+							gExpandCollapseImagesArray =  new Array();
+						}						
+						if(!gExpandCollapseImagesArray[uniqueDivId])
+						{
+							var divElement = document.getElementById(uniqueDivId);						
+							gExpandCollapseImagesArray[uniqueDivId] = new ImgCollection(divElement.getElementsByTagName("img"));
+						}
+						var expandCollapseState = gExpandCollapseImagesArray[uniqueDivId].state;
+						var expandCollapseImagesArray = gExpandCollapseImagesArray[uniqueDivId].imgArray;
+						if (expandCollapseState == "expanded")
+						{
+							for(var i=0; i<expandCollapseImagesArray.length;++i)
+							{
+								var imgElem = expandCollapseImagesArray[i];
+								if (imgElem.className == "trExpanded")
+									collapseTRImg(imgElem);
+								else
+									collapseImageDiv(imgElem);
+							}
+							rootImgElem.src =getImageAbsolutePath("plus.png");
+							collapseImageDiv(rootImgElem);
+							expandCollapseState="collapsed";
+						}
+						else
+						{
+							for(var i=0; i<expandCollapseImagesArray.length;++i)
+							{
+								var imgElem = expandCollapseImagesArray[i];
+								if (imgElem.className == "trExpanded")
+									expandTRImg(imgElem);
+								else
+									expandImageDiv(imgElem);
+							}
+							rootImgElem.src =getImageAbsolutePath("minus.png");
+							expandImageDiv(rootImgElem);
+							expandCollapseState="expanded";
+						}
+						gExpandCollapseImagesArray[uniqueDivId].state = expandCollapseState;
+					}
+					/** A High level expand function which will expand all the DIVs in HTML body 
+					**/
+					expandAllTables = function(event)
+					{
+						var anchorElement = event.target || event.srcElement;	
+						if (anchorElement)
+						{
+							var anchorHref = anchorElement.href;
+							var uniqueDivId = 	anchorElement.className;
+							var rootImgElem = document.getElementById(uniqueDivId +'img');	
+							if(!gExpandCollapseImagesArray)
+							{
+								gExpandCollapseImagesArray =  new Array();
+							}		
+							if(!gExpandCollapseImagesArray[uniqueDivId])
+							{
+								var divElement = document.getElementById(uniqueDivId);						
+								gExpandCollapseImagesArray[uniqueDivId] = new ImgCollection(divElement.getElementsByTagName("img"));
+							}
+							var expandCollapseImagesArray = gExpandCollapseImagesArray[uniqueDivId].imgArray;
+							for(var i=0; i<expandCollapseImagesArray.length;++i)
+							{
+								var imgElem = expandCollapseImagesArray[i];
+								if (imgElem.className != "trExpanded")
+									expandImageDiv(imgElem);
+							}
+							rootImgElem.src =getImageAbsolutePath("minus.png");
+							expandImageDiv(rootImgElem);		
+							gExpandCollapseImagesArray[uniqueDivId].state = "expanded";
+							window.location.href = anchorHref; 
+						}
+							return false;
+					}	
+
+					expandTable = function(event)
+					{
+						var anchorElement = event.target || event.srcElement;		
+						var anchorHref = anchorElement.href;
+						var indexOfHash = anchorHref.lastIndexOf('#');
+						var id = anchorHref.substring(indexOfHash + 1);
+						var tableElement = document.getElementById(id);
+						var parentElement = tableElement.parentNode;
+						while(parentElement.tagName != "BODY")
+						{
+							if(parentElement.tagName=='DIV' && parentElement.className=='collapsed')
+							{
+								var imgElem = parentElement.parentNode.getElementsByTagName("IMG")[0];
+								var imgSrc = imgElem.src;
+								var indexOfLastSlash  = imgSrc.lastIndexOf('/') + 1;
+								var imgPath = imgSrc.slice(0,indexOfLastSlash);
+								var imgName = imgSrc.slice(indexOfLastSlash);
+								parentElement.className="expanded";
+								imgName = imgName.replace("plus","minus");					
+								imgElem.src=imgPath+imgName;
+							}
+							parentElement = parentElement.parentNode;
+						}
+						window.location.href = anchorHref;
+						return false;
+					}
+					
+				/** Functions to expand collapse tr elements **/
+				var kExpandedState = 1;
+				var kCollapsedState = 0;
+				expandCollapseTR = function(event)
+				{
+					var imgElem = event.target || event.srcElement;			 
+					if (imgElem)
+					{
+						expandCollapseTRImg(imgElem);
+					}
+				}
+				expandCollapseTRImg  = function(imgElem)
+				{
+					var trElem	= imgElem.parentNode.parentNode;
+					if(trElem)
+					{
+						var expCollState = getStateFromTRElement(trElem);
+						if (expCollState == kCollapsedState)
+						{
+							expandNestedRows(trElem);
+							setStateOfTR(trElem, kExpandedState);
+							setImageToMinus(imgElem);
+						}
+						else if (expCollState == kExpandedState)
+						{
+							collapseNestedRows(trElem);
+							setStateOfTR(trElem, kCollapsedState);
+							setImageToPlus(imgElem);
+						}
+					}
+				}
+				expandTRImg  = function(imgElem)
+				{
+					var trElem	= imgElem.parentNode.parentNode;
+					if(trElem)
+					{
+						expandNestedRows(trElem);
+						setStateOfTR(trElem, kExpandedState);
+						setImageToMinus(imgElem)
+					}
+				}
+				collapseTRImg  = function(imgElem)
+				{
+					var trElem	= imgElem.parentNode.parentNode;
+					if(trElem)
+					{
+						collapseNestedRows(trElem);
+						setStateOfTR(trElem, kCollapsedState);
+						setImageToMinus(imgElem);
+					}
+				}
+				getStateFromTRElement = function(trElem)
+				{
+					var className = trElem.className;
+					var state = kExpandedState;
+					var splitData = className.split(' ');
+					if(splitData.length >= 3)
+					{
+						state = parseInt(splitData[2].split(':')[1],10)
+					}
+					return state;
+				}
+				getLevelFromTRElement = function(trElem)
+				{
+					var className = trElem.className;
+					var level = -1;
+					var splitData = className.split(' ');
+					if(splitData.length >= 2)
+					{
+						level = parseInt(splitData[1].split(':')[1],10)
+					}
+					return level;
+				}
+				setVisibiltyOfTR = function(trElem, visibility)
+				{
+					var className = trElem.className;
+					var splitData = className.split(' ');
+					if(splitData.length >= 3)
+					{
+						splitData[0] = visibility;
+						trElem.className = splitData.join(' ');
+					}					
+				}
+				setStateOfTR = function(trElem, state)
+				{
+					var className = trElem.className;
+					var splitData = className.split(' ');
+					if(splitData.length >= 3)
+					{
+						splitData[2] = 'state:' + state;
+						trElem.className = splitData.join(' ');
+					}					
+				}
+				setImageToPlus = function(imgElem)
+				{
+					var imgSrc = imgElem.src;
+					var indexOfLastSlash  = imgSrc.lastIndexOf('/') + 1;
+					var imgPath = imgSrc.slice(0,indexOfLastSlash);
+					var imgName = imgSrc.slice(indexOfLastSlash);
+					imgName = imgName.replace("minus","plus");
+					imgElem.src=imgPath+imgName;
+				}
+				setImageToMinus = function(imgElem)
+				{
+					var imgSrc = imgElem.src;
+					var indexOfLastSlash  = imgSrc.lastIndexOf('/') + 1;
+					var imgPath = imgSrc.slice(0,indexOfLastSlash);
+					var imgName = imgSrc.slice(indexOfLastSlash);
+					imgName = imgName.replace("plus","minus");
+					imgElem.src=imgPath+imgName;
+				}
+				collapseNestedRows = function(trElem)
+				{					
+					var currLevel = getLevelFromTRElement(trElem);
+					trElem = trElem.nextSibling;
+					while (trElem)
+					{
+						if (trElem.nodeName == "TR" || trElem.nodeName == "tr")
+						{
+							var nextLevel = getLevelFromTRElement(trElem);
+							if (nextLevel > currLevel)
+								setVisibiltyOfTR(trElem, "hidden");
+							else
+								break;
+						}
+						trElem =  trElem.nextSibling;
+					}
+				}
+				expandNestedRows = function(trElem)
+				{
+					var currLevel = getLevelFromTRElement(trElem);
+					var makeVisible = true;
+					var level = -1;
+					trElem = trElem.nextSibling;
+					while (trElem)
+					{
+						if (trElem.nodeName == "TR" || trElem.nodeName == "tr")
+						{
+							var nextLevel = getLevelFromTRElement(trElem);
+							if (nextLevel > currLevel)
+							{
+								var state = getStateFromTRElement(trElem);
+								if (makeVisible == true)
+								{
+									if (state == kCollapsedState)
+									{
+										level = nextLevel;
+										makeVisible = false;
+									}
+									setVisibiltyOfTR(trElem, "visible");
+								}
+								else if(nextLevel <= level)
+								{
+									level = -1;
+									makeVisible = true;
+									if (state == kCollapsedState)
+									{
+										level = nextLevel;
+										makeVisible = false;
+									}
+									setVisibiltyOfTR(trElem, "visible");
+								}							 
+							}
+							else
+								break;
+						}
+						trElem = trElem.nextSibling;
+					}
+				}
+				//Perform any initialization in this method and add dynamic event handlers here	
+					init = function(path)
+					{																	
+						setStylesheetPath(path);
+					}
+						//</script><style type="text/css">
+					body {font-family:VERDANA;}
+					img {margin-right:5px;}
+					img.expandCollapseAll{width:26px; height:28px; border-style:none; cursor:pointer;}
+					img.expandCollapse{border-style:none; cursor:pointer}
+					table.uutTable{font-size: 70%;border-width:0.13em;border-style:ridge;border-color:silver;border-collapse:collapse;width:70%;}
+					table.uutTable td, th, tr{border-width:1px;border-style:ridge;border-color:silver;white-space:nowrap;padding:0.4em;vertical-align:text-top;border-collapse:collapse;}
+					table.batchTable{width:80%;font-size: 70%;border-width:0.13em;border-style:ridge;border-color:silver;border-collapse:collapse;}
+					table.batchTable td, th, tr{border-width:1px;border-style:ridge;border-color:silver;white-space:normal;padding:0.4em;vertical-align:text-top;border-collapse:collapse;}
+					table.uutHrefTable{width:80%;font-size: 70%;border-width:0.13em;border-color:silver;border-collapse:collapse;border-style:ridge;}
+					table.uutHrefTable td, th, tr{border-width:0.13em;border-color:silver;border-collapse:collapse;border-style:ridge;padding:0.4em;text-align:center;}
+					table.stepTable{width:70%;font-size: 70%;border-width:0.13em;border-color:silver;border-collapse:collapse;border-style:ridge;}
+					table.stepTable td, th, tr{border-width:0.13em;border-color:silver;border-collapse:collapse;border-style:ridge;padding:0.4em;text-align:left;}					
+					hr.headerSeparator{text-align:left;height:1px;width:90%;margin-left:0px;}
+					hr.uutSeparator{text-align:left;height:1px;width:90%;margin-left:0px;}
+					hr.batchSeparator{text-align:center;height:1px;width:90%;}
+					table.criticalFailureTable{width:70%;font-size: 70%;border-width:1px;border-style:ridge;border-color:silver;border-collapse:collapse;}
+					table.criticalFailureTable td, th{border-width:1px;border-style:ridge;border-color:silver;border-collapse:collapse;white-space:nowrap;padding:0.4em;vertical-align:text-top;}
+					table.criticalFailureTable td {text-align:left;}
+					table.criticalFailureTable th {text-align:center;}
+					span.stepText{font-size:94%;}
+					tr.visible{diplay:inline;}
+					tr.hidden{display:none;}
+					img{margin:0px;padding:0px;}
+					</style></head><body onload=" init('D:/Program Files (x86)/National Instruments/TestStand 2017/Components/Models/TestStandModels/ATML/StyleSheets/');"><h5>UUT Report</h5><table class="uutTable"><tr><td style="font-weight:bold;">Station ID</td><td>MS-20180611GVXI</td></tr><tr><td style="font-weight:bold;">Serial Number</td><td>NONE</td></tr><tr><td style="font-weight:bold;">Date</td><td>2018年9月3日 星期一</td></tr><tr><td style="font-weight:bold;">Time</td><td>下午 1:02:50</td></tr><tr><td style="font-weight:bold;">Operator</td><td>administrator</td></tr><tr><td style="font-weight:bold;">Execution Time </td><td>9.99861 seconds						
+						</td></tr><tr><td style="font-weight:bold;">Number of Results</td><td>50</td></tr><tr><td style="font-weight:bold;">UUT Result</td><td style="color:#FF0000;">Error</td></tr><tr><td colspan="2" style="color:  #FF0000  ; white-space:normal; text-align:left;">Error: 
+							The following error occurred for parameter 'Return Value' with argument expression '' for call to member 'GetBMSInfo': The definition for the struct 'SNV01.SNV01Control+BMS_INFO' is different in the assembly than when you specified the module. You must update the module specification and data TestStand passes.[Error Code: -17500, 
+				Operation Failed.
+			]
+					</td></tr></table><br><hr class="headerSeparator"><span style="font-size:70%;font-weight:bold;"><img onclick="expandCollapseAll(event)" alt="Expand/Collapse" src="D:/Program Files (x86)/National Instruments/TestStand 2017/Components/Models/TestStandModels/ATML/StyleSheets/minus.png" class="IDATBRF31EDKFAN2KWMSVWQG3DPGXT0YRVF2J1KYEYKOGTLC3TIRBC" id="IDATBRF31EDKFAN2KWMSVWQG3DPGXT0YRVF2J1KYEYKOGTLC3TIRBCimg">
+				Expand / Collapse MainSequence
+			</span><br><br><div class="expanded" id="IDATBRF31EDKFAN2KWMSVWQG3DPGXT0YRVF2J1KYEYKOGTLC3TIRBC"><span style="margin-left:20px;font-size:70%;font-weight:bold;">
+			Begin Sequence:  MainSequence
+			</span><br><span style="margin-left:20px;font-size:70%;font-weight:bold;">
+					(D:\PCTools\2.source\SNV-AutoTestV1.0.0A\Settings\UIEdit\产品代号\BCU平台\SNV-BCU.seq)
+				</span><br><br><table  class="stepTable" style="margin-left:20px;"><tr><td rowspan="2" valign="bottom" style="text-align:center;" width="30%"><b>Step</b></td><td rowspan="2" valign="bottom" style="text-align:center;" width="6%"><b>Status</b></td><td rowspan="2" valign="bottom" style="text-align:center;" width="10%"><b>Measurement</b></td><td rowspan="2" valign="bottom" style="text-align:center;" width="5%"><b>Units</b></td><td colspan="4" style="text-align:center;" width="33%"><b>Limits</b></td></tr><tr><td width="10%" style="text-align:center;"><b>Nominal Value</b></td><td width="14%" style="text-align:center;"><b>Low Limit</b></td><td width="14%" style="text-align:center;"><b>High Limit</b></td><td width="10%" style="text-align:center; white-space:nowrap;"><b>Comparison Type</b></td></tr><tr><td><a name="ResultId65"></a>Action</td><td style="color:#B98028;text-align:center;">Skipped</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId66"></a>Wait</td><td style="color:#008000;text-align:center;">Done</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId67"></a>连接CAN_WithFilter</td><td style="color:#008000;text-align:center;">Done</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId68"></a>Wait</td><td style="color:#008000;text-align:center;">Done</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId69"></a>BCU_RatedRealAh设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId70"></a>BCU_SOC设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId71"></a>BCU_SOH设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId72"></a>BCU_Clock设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId73"></a>BCU_PackNo设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId74"></a>BCU_ChargeTimes设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId75"></a>BCU_barCode设置(BMS异常)</td><td style="color:#B98028;text-align:center;">Skipped</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId76"></a>BCU_ProductNo设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId77"></a>BCU_Version设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId78"></a>BCU_CarNo设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId79"></a>BCU_HeatControl设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId80"></a>BCU_ChargeControl设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId81"></a>BCU_CellNum设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId82"></a>BCU_TempNum设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId83"></a>BCU_Level1设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId84"></a>BCU_Level2设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId85"></a>BCU_Level3设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId86"></a>BCU_BatInfo设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId87"></a>BCU_ChargeAh设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId88"></a>BCU_StartCellNo设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId89"></a>BCU_StartTempNo设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId90"></a>BCU_BmuFusePos设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId91"></a>BCU_VoltChanNum设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId92"></a>BCU_User设置</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId93"></a>ClearBmsInfo</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId94"></a>BCU_SOC读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId95"></a>BCU_SOH读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId96"></a>BCU_PackNo读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId97"></a>BCU_RatedRealAh读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId98"></a>BCU_CarNumber读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId99"></a>BCU_ConfigVersion读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId100"></a>BCU_ProductNo读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId101"></a>BCU_Clock读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId102"></a>BCU_barCode读取</td><td style="color:#B98028;text-align:center;">Skipped</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId103"></a>BCU_TempControl读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId104"></a>BCU_ChargeControl读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId105"></a>BCU_VoltNumber读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId106"></a>BCU_TempNumber读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId107"></a>BCU_Level1读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId108"></a>BCU_Level2读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId109"></a>BCU_Level3读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId110"></a>BCU_BatInfo读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId111"></a>BCU_ChargeDischargeAh读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId112"></a>BCU_ChargeTimes读取</td><td style="color:#008000;text-align:center;">Passed</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a name="ResultId113"></a>GetBmsInfo</td><td style="color:#FF0000;text-align:center;">Error</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style="color:  #FF0000  "><td style="padding-left:15px; vertical-align:top;">Error Message:</td><td colspan="6" style="white-space:normal;text-align:left;vertical-align:middle;">The following error occurred for parameter 'Return Value' with argument expression '' for call to member 'GetBMSInfo': The definition for the struct 'SNV01.SNV01Control+BMS_INFO' is different in the assembly than when you specified the module. You must update the module specification and data TestStand passes.[Error Code: -17500]
+				</td></tr><tr><td><a name="ResultId114"></a>断开CAN</td><td style="color:#008000;text-align:center;">Done</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><br><span style="margin-left:20px;font-size:70%;font-weight:bold;">
+							
+			End Sequence: MainSequence
+			</span></div><h5>End UUT Report</h5><hr class="uutSeparator"></body></html>
