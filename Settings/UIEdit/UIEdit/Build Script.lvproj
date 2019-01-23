@@ -83,7 +83,7 @@
 				<Property Name="Bld_localDestDir" Type="Path">/D/PCTools/2.source/SNV-AutoTestV1.0.0A</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{FA5BCBFB-0B8D-4A3D-9FAA-FED777642BCD}</Property>
-				<Property Name="Bld_version.build" Type="Int">131</Property>
+				<Property Name="Bld_version.build" Type="Int">139</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">MainTest.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">/D/PCTools/2.source/SNV-AutoTestV1.0.0A/MainTest.exe</Property>
